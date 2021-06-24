@@ -6,8 +6,8 @@ def ways_to_add_up_to_n(n: int, by: list, stack: list = None):
         by.sort()
     this_layer = []
     previous_layer = []
-    index = 0
     if n - min(by) >= 0:
+        index = 0
         for number in by:
             if n - number == 0:
                 this_layer.append(stack + [number])
